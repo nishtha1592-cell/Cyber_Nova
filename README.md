@@ -1,4 +1,4 @@
-🚀 Cyber Nova
+* 🚀 Cyber Nova *
 📖 About the Project
 Cyber Nova is a web-based project developed as part of our academic coursework.
 The main aim of this project is to create awareness about cyber security and online safety.
