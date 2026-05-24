@@ -204,7 +204,7 @@ img {
   }
 }
 
-/* Mobile */
+/* /* Mobile */
 @media screen and (max-width: 768px) {
 
   body {
@@ -250,9 +250,9 @@ img {
 
   .hero p {
     font-size: 15px;
-  }
+  } */
 
-  .hero-btns {
+  /* .hero-btns {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,8 +273,8 @@ img {
   .heading h2 {
     font-size: 28px;
     text-align: center;
-  }
-
+  } */
+/* 
   .services {
     padding: 20px;
   }
@@ -290,4 +290,68 @@ img {
   h1, h2, h3, p {
     word-wrap: break-word;
   }
+} */
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE STYLES (Max-width: 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Reset Layout Grids to a single column stack */
+    .grid-2-col, .grid-3-col, .grid-4-col, .hero-container, .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* 2. Responsive Typography */
+    h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .section-padding {
+        padding: 50px 0 !important;
+    }
+
+    /* 3. Dropdown Mobile Navigation Drawer */
+    .menu-toggle {
+        display: block !important; /* Shows hamburger icon */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px; 
+        left: -100%; /* Keeps menu completely hidden off-screen by default */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #ffffff; /* Change to your exact background theme color */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 24px;
+        gap: 25px;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+
+    /* Toggle visibility class via JavaScript */
+    .nav-menu.active {
+        left: 0; /* Slides menu smoothly into view */
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Fluid Hero Elements */
+    .hero-image, .img-placeholder {
+        width: 100% !important;
+        max-width: 100% !important;
+        order: -1; /* Moves image above the main text content on mobile views */
+    }
 }
