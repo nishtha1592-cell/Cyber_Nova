@@ -148,30 +148,30 @@ a{
 }
 
 /* --- Responsive Layout --- */
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     .hero { flex-direction: column; text-align: center; }
     .hero-text h1 { font-size: 2.5rem; }
     .hero-btns { justify-content: center; }
     .hero-visual { margin-top: 50px; }
-} */
+}
 
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
 
-/* img {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Tablet */
-/* @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
 
   header {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
   nav ul {
     flex-wrap: wrap;
@@ -202,10 +202,10 @@ a{
   .card {
     width: 100%;
   }
-} */ */
+} 
 
-/* /* Mobile */
-/* @media screen and (max-width: 768px) {
+/* Mobile */
+@media screen and (max-width: 768px) {
 
   body {
     overflow-x: hidden;
@@ -214,7 +214,10 @@ a{
   header {
     padding: 15px;
   }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
   .logo {
     font-size: 20px;
     text-align: center;
@@ -250,9 +253,9 @@ a{
 
   .hero p {
     font-size: 15px;
-  } */ 
+  } 
 
-  /* .hero-btns {
+ .hero-btns {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,15 +269,14 @@ a{
   }
 
   .floating-box img {
-    width: 100%;
+    width: 50%;
     max-width: 300px;
   }
 
   .heading h2 {
-    font-size: 28px;
+    font-size: 25px;
     text-align: center;
-  } */
-/* 
+  } 
   .services {
     padding: 20px;
   }
@@ -290,6 +292,6 @@ a{
   h1, h2, h3, p {
     word-wrap: break-word;
   }
-} */
+}
 
 
