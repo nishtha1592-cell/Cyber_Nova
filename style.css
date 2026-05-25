@@ -291,79 +291,244 @@ img {
     word-wrap: break-word;
   }
 } */
-/* ==========================================
-   MOBILE RESPONSIVE & DROPDOWN MENU CSS 
-   ========================================== */
+
+
 @media screen and (max-width: 768px) {
-    
-    /* 1. Force all layouts/grids into a single responsive column stack */
-    .hero-container, 
-    .grid-2-col, 
-    .grid-3-col, 
-    .grid-4-col,
-    .contact-container,
-    header > div { 
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 24px !important;
-    }
 
-    /* Adjust structural section padding for smaller viewports */
-    section, .section-padding {
-        padding: 40px 16px !important;
-    }
+  /* GLOBAL */
 
-    /* Scale headers to fit perfectly on mobile screens */
-    h1 { font-size: 2.1rem !important; line-height: 1.3 !important; }
-    h2 { font-size: 1.7rem !important; }
-    h3 { font-size: 1.3rem !important; }
+  *{
+    box-sizing:border-box;
+  }
 
-    /* 2. Transform the Horizontal Navbar into a Dropdown Menu Drawer */
-    .menu-toggle {
-        display: block !important; /* Forces your hamburger icon/button to show */
-        cursor: pointer;
-    }
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+  }
 
-    .nav-menu {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 20px !important;
-        
-        /* Position fixed below the header bar */
-        /* position: fixed !important; */
-        top: 60px; /* Adjust this to match your exact navbar header height */
-        left: -100%; /* Keeps the menu completely hidden off-screen by default */
-        
-        /* Drawer styling */
-        width: 100% !important;
-        height: calc(100vh - 60px) !important;
-        background-color: #ffffff !important; /* Change to match your dark/light theme */
-        padding: 30px 24px !important;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        z-index: 9999 !important;
-        transition: left 0.3s ease-in-out !important;
-    }
+  body{
+    padding:0;
+    margin:0;
+  }
 
-    /* 3. Class triggered by JavaScript to slide the dropdown menu into view */
-    .nav-menu.active {
-        left: 0 !important;
-    }
+  img{
+    max-width:100%;
+    height:auto;
+    display:block;
+  }
 
-    /* Make menu links and CTA buttons expand full-width for easier thumb tapping */
-    .nav-menu a, 
-    .nav-btn,
-    .btn-primary {
-        width: 100% !important;
-        text-align: center !important;
-    }
+  section{
+    padding:60px 20px !important;
+  }
 
-    /* 4. Fluid Media Handlers */
-    img, .hero-image, .img-placeholder {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        order: -1 !important; /* Pushes illustrations/images above text elements on mobile */
-    }
+  /* NAVBAR */
+
+  .navbar,
+  nav{
+    width:100%;
+    padding:15px 20px !important;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    background:rgba(5,8,22,0.95);
+    backdrop-filter:blur(10px);
+  }
+
+  .logo{
+    font-size:1rem !important;
+    letter-spacing:1px;
+  }
+
+  /* MOBILE MENU */
+
+  .nav-links,
+  .menu,
+  ul{
+    position:fixed;
+    top:70px;
+    right:-100%;
+    width:100%;
+    height:calc(100vh - 70px);
+    background:#050816;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    gap:25px;
+    padding-top:40px;
+    transition:0.4s ease;
+  }
+
+  .nav-links.active,
+  .menu.active,
+  ul.active{
+    right:0;
+  }
+
+  .nav-links a,
+  .menu a,
+  ul li a{
+    font-size:1.1rem !important;
+    text-decoration:none;
+    color:#fff;
+  }
+
+  /* HAMBURGER */
+
+  .hamburger,
+  .menu-btn,
+  .mobile-menu{
+    display:block !important;
+    font-size:2rem;
+    cursor:pointer;
+    color:#fff;
+  }
+
+  /* HERO SECTION */
+
+  .hero,
+  .hero-section,
+  .banner{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+  }
+
+  .hero h1,
+  .hero-section h1,
+  .banner h1{
+    font-size:2.2rem !important;
+    line-height:1.3;
+  }
+
+  .hero p,
+  .hero-section p,
+  .banner p{
+    font-size:1rem !important;
+    line-height:1.7;
+    margin-top:15px;
+  }
+
+  /* BUTTONS */
+
+  button,
+  .btn{
+    width:100%;
+    padding:14px 20px;
+    font-size:1rem;
+    border-radius:10px;
+  }
+
+  /* GRID / CARDS */
+
+  .grid,
+  .cards,
+  .container,
+  .row,
+  .services,
+  .projects{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
+  }
+
+  .card,
+  .service-card,
+  .project-card{
+    width:100% !important;
+    padding:20px;
+  }
+
+  /* TEXT */
+
+  h1{
+    font-size:2rem !important;
+  }
+
+  h2{
+    font-size:1.6rem !important;
+  }
+
+  h3{
+    font-size:1.2rem !important;
+  }
+
+  p{
+    font-size:0.95rem !important;
+    line-height:1.7;
+  }
+
+  /* FORMS */
+
+  input,
+  textarea,
+  select{
+    width:100%;
+    padding:14px;
+    font-size:1rem;
+    border-radius:8px;
+  }
+
+  /* FOOTER */
+
+  footer{
+    text-align:center;
+    padding:30px 20px;
+  }
+
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  /* TABLES */
+
+  table{
+    display:block;
+    overflow-x:auto;
+    width:100%;
+  }
+
+  /* VIDEOS */
+
+  iframe,
+  video{
+    width:100% !important;
+    height:auto !important;
+    border-radius:10px;
+  }
+
+  /* FIX OVERFLOW */
+
+  .container,
+  .wrapper,
+  .content{
+    width:100% !important;
+    overflow:hidden;
+  }
+
+  /* CYBER GLOW EFFECT */
+
+  .card,
+  .btn,
+  button{
+    box-shadow:0 0 15px rgba(0,247,255,0.15);
+  }
+
+  /* SMOOTH MOBILE ANIMATION */
+
+  *{
+    transition:0.3s ease;
+  }
 }
