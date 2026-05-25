@@ -332,7 +332,7 @@ img {
         gap: 20px !important;
         
         /* Position fixed below the header bar */
-        position: fixed !important;
+        /* position: fixed !important; */
         top: 60px; /* Adjust this to match your exact navbar header height */
         left: -100%; /* Keeps the menu completely hidden off-screen by default */
         
