@@ -236,10 +236,10 @@ img {
   }
 
   .icons {
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
+    /* flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; */
   }
 
   .hero {
@@ -247,12 +247,12 @@ img {
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 1.2;
   }
 
   .hero p {
-    font-size: 15px;
+    font-size: 12px;
   } 
 
  .hero-btns {
@@ -269,7 +269,7 @@ img {
   }
 
   .floating-box img {
-    width: 50%;
+    width: 100%;
     max-width: 300px;
   }
 
