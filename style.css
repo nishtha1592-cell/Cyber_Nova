@@ -247,12 +247,12 @@ img {
   }
 
   .hero h1 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.2;
   }
 
   .hero p {
-    font-size: 12px;
+    font-size: 17px;
   } 
 
  .hero-btns {
@@ -274,17 +274,17 @@ img {
   }
 
   .heading h2 {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   } 
   .services {
     padding: 15px;
   }
 .services p{
-      font-size: 12px;
+      font-size: 17px;
   }
-.services h2{
-        font-size: 2.0rem;
+.services h3{
+        font-size: 1.0rem;
     line-height: 1.2;
   }
 
